@@ -11,6 +11,10 @@
   <a href="/tadpoles">Back</a> | 
   <a href="/tadpoles/<%= @tadpole.id %>/edit">Edit</a> | 
   <a href="/tadpoles/<%= @tadpole.id %>/destroy">Delete</a>
+  <%= form_for(@tadpole, {url: metamorphose_tadpole_path, method: 'POST'}) do |f| %>
+    <%= f.hidden_field :id %>
+    <%= f.submit 'Become a frog' %>
+  <% end %> 
 </div>
 
 <div class="card">
